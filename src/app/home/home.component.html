@@ -1,0 +1,35 @@
+<div fxLayout fxLayoutAlign="center center">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Lets Create a MadLib</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="example-container" #form>
+        <mat-form-field class="input-style" appearance="outline">
+          <mat-label>Enter a noun</mat-label>
+          <input matInput placeholder="Noun" #noun>
+        </mat-form-field>
+
+        <mat-form-field class="input-style" appearance="outline">
+          <mat-label>Enter a verb</mat-label>
+          <input matInput placeholder="Verb" #verb>
+        </mat-form-field>
+
+        <mat-form-field class="input-style" appearance="outline">
+          <mat-label>Enter a place</mat-label>
+          <input matInput placeholder="Place" #place>
+        </mat-form-field>
+
+        <mat-form-field class="input-style" appearance="outline">
+          <mat-label>Enter a adjective</mat-label>
+          <input matInput placeholder="Adjective" #adjective>
+        </mat-form-field>
+      </form>
+      <div class="mad-lib"> {{madLib}} </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="createMadLib(noun.value, verb.value, place.value, adjective.value)">Create</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
